@@ -1,14 +1,11 @@
 public class Report5 {
     public static void main(String[] args) {
+        String str = "壱百満";
         try {
-            String str = null;
-            System.out.println(str.length());
-        } catch (NullPointerException e) {
-            // 条件1
-            System.out.println("NullPointerExceptionが発生しました。");
-
-            // 条件3
-            System.out.println("例外メッセージ: " + e.getMessage());
+            int value = Integer.parseInt(str);
+            System.out.println("変換成功: " + value);
+        } catch (NumberFormatException e) {
+            System.out.println("変換失敗: " + e.getMessage());
         }
     }
 }
